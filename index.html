@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet"href="css/index.css">
+</head>
+<body>
+    <div class="Carousel-Container">
+        <div class="Carousel-Image-Container">
+            <div class="Carousel-btns">
+                <div class="next-btn"onclick="nextImage()">
+                    <img src="assets/svg/next.svg">
+                </div>
+                <div class="previous-btn"onclick="previousImage()">
+                    <img src="assets/svg/previous.svg">
+                </div>
+            </div>
+            <img src=""id="Image-Viewer">
+            <div class="dots-container">
+                <div class="dot"id="dot-one"></div>
+                <div class="dot"id="dot-two"></div>
+                <div class="dot"id="dot-three"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- IMAGE SLIDER USING PURE HTML,CSS ONLY    -->
+
+    <div class="Slider-Container">
+        <div class="slider-dots-container">
+            <a class="dot-link"href="#image-01"><div class="sdot"id="dot-one"></div></a>
+            <a class="dot-link"href="#image-02"><div class="sdot"id="dot-two"></div></a>
+            <a class="dot-link"href="#image-03"><div class="sdot"id="dot-three"></div></a>
+        </div>
+        <div class="Slider-Image-Container">
+            <img id="image-01"src="assets/images/1.jpg"alt='Slider Images'class='slider-image'/>
+            <img id="image-02"src="assets/images/2.jpg"alt='Slider Images'class='slider-image'/>
+            <img id="image-03"src="assets/images/3.jpg"alt='Slider Images'class='slider-image'/>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

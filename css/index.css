@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+body{
+    padding: 20px;
+}
+.Carousel-Container{
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    user-select: none;
+}
+
+.Carousel-Image-Container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Carousel-Image-Container img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+    0%{opacity: 0.4;}
+    100%{opacity: 1;}
+}
+.next-btn{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.next-btn img{
+    user-select: none;
+    height: 50px;
+    width: 50px;
+}
+
+.next-btn:hover{
+    backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.previous-btn{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.previous-btn:hover{
+    backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.next-btn:hover img{
+    filter: invert(1);
+}
+.previous-btn:hover img{
+    filter: invert(1);
+}
+
+.previous-btn img{
+    user-select: none;
+    height: 50px;
+    width: 50px;
+}
+
+.dots-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.4s ease;
+}
+
+.active-dot{
+    transition: 0.4s ease;
+    background-color: white;
+}
+
+
+/* Image Slider */
+
+.Slider-Container{
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+.Slider-Image-Container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+		display: none;
+	}
+}
+.slider-image{
+    object-fit: cover;
+    flex: 1 0 100%;
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+
+}
+.slider-dots-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 1;
+    bottom:10px;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+}
+.dot-link:hover div{
+    transition: 0.3s ease;
+    background-color: white;
+}
+.sdot{
+    background-color: black;
+    height:20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}

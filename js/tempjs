@@ -1,0 +1,43 @@
+var Image1="assets/images/1.jpg";
+var Image2="assets/images/2.jpg";
+var Image3="assets/images/3.jpg";
+var index=0;
+var Images=[Image1,Image2,Image3]; // Images array
+var ImageViewer=document.getElementById('Image-Viewer');// Img Tag selected
+var dotOne=document.getElementById('dot-one');
+var dotTwo=document.getElementById('dot-two');
+var dotThree=document.getElementById('dot-three');
+var dots=[dotOne,dotTwo,dotThree];
+ImageViewer.src=Images[index];//changes Image
+var activeDot=0;
+activateDot(0);
+function activateDot(val){
+console.clear();
+ for(var x=0;x<=dots.length;x++){
+    if(x==val){
+        dots[val].style.backgroundColor='white';
+    }
+    else{
+        dots[x].style.backgroundColor='black';
+    }
+ }
+    
+}
+
+
+function nextImage(){
+    if(index<=1){
+    index++;
+    ImageViewer.src=Images[index];
+    activateDot(index);
+    }
+}
+function previousImage(){
+    if(index>0){
+    index=index-1;
+    ImageViewer.src=Images[index];
+    activateDot(index);
+    }
+}
+
+
